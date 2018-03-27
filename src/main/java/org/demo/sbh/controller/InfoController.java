@@ -13,14 +13,14 @@ public class InfoController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(name = "/save")
+    @RequestMapping(value = "/save")
     public String save() {
         User user = new User("username1", "password1", "nickname1");
         userService.save(user);
         return "{'message':'success'}";
     }
 
-    @RequestMapping(name = "/findAll")
+    @RequestMapping(value = "/findAll")
     public List<User> findAll() {
         List<User> list = userService.findAll();
         return list;
