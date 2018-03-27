@@ -23,4 +23,9 @@ public class UserServiceImpl implements UserService {
     public void save(User user) {
         userDao.save(user);
     }
+
+    @Override
+    public List<User> findByNickname(String nickname) {
+        return userDao.findByNickname(nickname);
+    }
 }

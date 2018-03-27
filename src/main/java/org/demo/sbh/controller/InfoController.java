@@ -26,4 +26,9 @@ public class InfoController {
         return list;
     }
 
+    @RequestMapping(value = "/findByNickname")
+    public List<User> findByNickname(String nickname) {
+        return userService.findByNickname(nickname);
+    }
+
 }

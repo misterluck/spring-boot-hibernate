@@ -10,4 +10,6 @@ public interface UserService {
 
     void save(User user);
 
+    List<User> findByNickname(String nickname);
+
 }
